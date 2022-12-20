@@ -1,0 +1,19 @@
+server:
+  port: 8082
+
+spring:
+  profiles:
+    active: prod
+---
+spring:
+  profile: prod
+  jpa:
+    hibernate:
+      ddl-auto: update
+      enable_lazy_load_no_trans: false
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/myscooldb
+    username: admin
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
