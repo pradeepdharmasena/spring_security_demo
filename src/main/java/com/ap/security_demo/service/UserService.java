@@ -5,4 +5,6 @@ import com.ap.security_demo.model.UserModel;
 
 public interface UserService {
     Users registerUser(UserModel userModel);
+
+    void saveVerificationTokenForUser(String token, Users user);
 }
